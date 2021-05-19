@@ -22,16 +22,14 @@ rand_colors = input("random colors? y/n: ")
 
 
 while(True):
-    xx = random.randint(0, res_x -1)
-    yy = random.randint(0, res_y -1)
+    x = random.randint(0, res_x -1)
+    y = random.randint(0, res_y -1)
 
     for key, values in already_drawn.items():
-        while (key == "x" and values == xx) and (key == "y" and values == yy):  #if there is already a point drawn on this location
-            xx = random.randint(0, res_x -1)
-            yy = random.randint(0, res_y -1)
+        while (key == "x" and values == x) and (key == "y" and values == y):  #if there is already a point drawn on this location
+            x = random.randint(0, res_x -1)
+            y = random.randint(0, res_y -1)
         else:
-            x = xx
-            y = yy
             one = True
 
     if one == True: #if new pixel
